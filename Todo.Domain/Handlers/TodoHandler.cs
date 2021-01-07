@@ -19,7 +19,17 @@ namespace Todo.Domain.Handlers
 
         public ICommandResult Handle(CreateTodoCommand command)
         {
-            throw new System.NotImplementedException();
+            // Fail Fast Validation
+            command.Validate();
+            if (command.Invalid)
+                return new GenericCommandResult(
+                    false,
+                    "Ops, parece que sua tarefa está errada!",
+                    command.Notifications);
+
+            // Salvar um todo no banco
+
+            // Notificar o usuario
         }
     }
 }
