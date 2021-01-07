@@ -22,7 +22,16 @@ namespace Todo.Domain.Commands
 
         public void Validate()
         {
-            throw new System.NotImplementedException();
+            if (Title.Length < 4)
+            {
+                throw new Exception("Título inválido");
+            }
+
+            if (User.Length < 4)
+            {
+                throw new Exception("Usuário inválido");
+            }
+
         }
     }
 }
