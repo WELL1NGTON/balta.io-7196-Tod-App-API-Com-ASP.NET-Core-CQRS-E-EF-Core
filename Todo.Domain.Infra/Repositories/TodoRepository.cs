@@ -25,7 +25,8 @@ namespace Todo.Domain.Infra.Repositories
 
         public IEnumerable<TodoItem> GetAll(string user)
         {
-            return _context.Todos
+            return _context
+                .Todos
                 .AsNoTracking()
                 .Where(TodoQueries.GetAll(user))
                 .OrderBy(x => x.Date);
@@ -33,22 +34,36 @@ namespace Todo.Domain.Infra.Repositories
 
         public IEnumerable<TodoItem> GetAllDone(string user)
         {
-            throw new NotImplementedException();
+            return _context
+                .Todos
+                .AsNoTracking()
+                .Where(TodoQueries.GetAllDone(user))
+                .OrderBy(x => x.Date);
         }
 
         public IEnumerable<TodoItem> GetAllUndone(string user)
         {
-            throw new NotImplementedException();
+            return _context
+                .Todos
+                .AsNoTracking()
+                .Where(TodoQueries.GetAllUndone(user))
+                .OrderBy(x => x.Date);
         }
 
         public TodoItem GetById(Guid id, string user)
         {
-            throw new NotImplementedException();
+            return _context
+                .Todos
+                .FirstOrDefault(x => x.Id == id && x.User == user);
         }
 
-        public IEnumerable<TodoItem> GetByPeriod(string email, DateTime date, bool done)
+        public IEnumerable<TodoItem> GetByPeriod(string user, DateTime date, bool done)
         {
-            throw new NotImplementedException();
+            return _context
+                .Todos
+                .AsNoTracking()
+                .Where(TodoQueries.GetByPeriod(user, date, done))
+                .OrderBy(x => x.Date);
         }
 
         public void Update(TodoItem todo)
