@@ -30,5 +30,7 @@ namespace Todo.Domain.Tests.QueryTests
             foreach (var item in result)
                 Assert.AreEqual("andrebaltieri", item.User);
         }
+
+        // TODO: Test get only done or undone tasks
     }
 }
