@@ -17,6 +17,10 @@ Quer aprender a criar uma API completa para seu App Web ou Mobile? Então este c
 
 André Baltieri - 8x Microsoft MVP
 
+## Certificado
+
+[![certificado](images/todo_app_api_com_aspnet_core_cqrs_e_ef_core.jpg)](https://balta.io/certificados/901f8808-24ce-4f66-9637-9c5196ca9436)
+
 ## Progresso do curso
 
 - [x] Setup
@@ -76,5 +80,3 @@ André Baltieri - 8x Microsoft MVP
 - [x] Restringindo acesso nos Controllers
 - [x] Testando a API
 - [x] Finalização
-
-[![certificado](images/todo_app_api_com_aspnet_core_cqrs_e_ef_core.jpg)](https://balta.io/certificados/901f8808-24ce-4f66-9637-9c5196ca9436)
